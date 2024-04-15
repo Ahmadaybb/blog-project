@@ -12,7 +12,7 @@ def home(request):
     featured_posts= Blog.objects.filter(is_featured=True,status='Published')
     posts= Blog.objects.filter(is_featured=False, status='Published')
     try:
-        about = About.object.get()
+        about = About.objects.get()
     except:
         about = None
     context={ 
